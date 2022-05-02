@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db2d2f3f4b0dc4499598d8372dec02, type: 3}
+  m_Name: TEXTO_Estacion06
+  m_EditorClassIdentifier: 
+  texts:
+  - "Estaci\xF3n 06: Orden y Limpieza "
+  - Siguiente
+  - "Men\xFA"
+  - Reiniciar
+  - "Bienvenidos a la estaci\xF3n #6 Orden y Limpieza "
+  - "Lo primero que debes saber es: \xBFQu\xE9 son trabajos peligrosos? Son aquellos
+    trabajos que representan un alto grado de peligro y pueden generar accidentes
+    graves, tales como:"
+  - 'Trabajos en Caliente: es todo aquel trabajo que genere llamas, chispas o calor
+    como por ejemplo trabajos de Corte y Soldadura.'
+  - 'Tanto asociados como contratistas antes de realizar cualquier trabajo catalogado
+    como peligroso deben de asegurarse cumplir con lo siguiente:'
+  - "A continuaci\xF3n, encontrar\xE1 desperdicios en el suelo, podr\xE1 interactuar
+    con los desechos depositandolos de manera correcta en sus basureros correspondientes. 
+    Seleccione continuar para iniciar la din\xE1mica."
+  - "- Si es proveedor o Contratista contar con Visado espec\xEDfico para el trabajo
+    a realizar."
+  - "- Para todos los casos sea Asociado o Contratista, se requiere un permiso para
+    trabajo peligroso, el cual debe ser firmado por Mantenimiento o Gerente de Instalaci\xF3n
+    donde se llevar\xE1n a cabo los trabajos, supervisor de los trabajadores y Protecci\xF3n
+    de Activos. Existe un formato de permiso para cada trabajo peligroso."
+  - Marque los 3 primeros requerimientos para el inicio del proceso de alisto
+  - Siguiente
+  - B. Realizar la marca en el reloj asignado.
+  - "C. Revisar su equipo log\xEDstico con el formato asignado."
+  - "D. Cumplir el protocolo de Covid (lavado de manos, uso de gel, medici\xF3n de 
+    temperatura y el pediluvio."
+  - E. Dejar su pertenencias en los lockers asignados.
+  - Respuestas correctas
+  - "Antes de realizar cualquier trabajo peligroso, verifica que cuentas con la capacitaci\xF3n,
+    autorizaci\xF3n y los equipos necesarios para llevarlo a cabo de forma segura
+    (herramientas, equipos de protecci\xF3n personal)."
+  - Trabajos en alturas superior a 2 metros.
+  - "Trabajo en Espacios Confinados: es todo espacio que no es apto para la permanencia
+    de personas y no fue dise\xF1ado para tal fin (Por ejemplo: tanques, fosas, alcantarillas,
+    etc.). "
+  - "Trabajos de Excavaci\xF3n: esta clase de trabajos NO debe ser realizado por
+    nuestros asociados, para ello deben contratarse Proveedores calificados."
+  - "Para trabajos peligrosos aseg\xFArate de cumplir todo lo que se establece en
+    el permiso para trabajos peligrosos."
+  - Continuar
+  - "Presiona \"Siguiente\" para continuar o presiona el bot\xF3n de reproducir para
+    repasar el v\xEDdeo."
+  - "\xA1Bien hecho! Has completado la Estaci\xF3n 6."
+  - "Para regresar al men\xFA, presiona \"Men\xFA\""
+  - "Para volver a repasar toda la estaci\xF3n, presiona \"Reiniciar\""
+  - "Para ir al siguiente estaci\xF3n, presiona \"Continuar\""
+  - Respuestas incorrectas
+  - Para poder continuar, debes responder las trivias correctamente.
+  - "Para volver a repasar toda la estaci\xF3n, presiona \"Reiniciar\""
+  - Para reintentar responder la trivia, presiona "Reintentar"
+  - Reintentar
+  - "Trabajos El\xE9ctricos: Siempre implementar LOTO (Lock out Tag Out o bloqueo
+    y etiquetado)"
+  - "\xA1Bien hecho! Has completado la Din\xE1mica 04. "
+  - "Din\xE1mica 04: Manejo de Desechos"

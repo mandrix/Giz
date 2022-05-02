@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db2d2f3f4b0dc4499598d8372dec02, type: 3}
+  m_Name: TEXTO_Estacion01
+  m_EditorClassIdentifier: 
+  texts:
+  - "Estaci\xF3n 01: Alisto"
+  - Siguiente
+  - "Men\xFA"
+  - Reiniciar
+  - "Bienvenidos a la estaci\xF3n #1 Alisto"
+  - "\xBFEst\xE1 listo para surtir?"
+  - Si
+  - "Escuche la ubicaci\xF3n que le indica el equipo, dir\xEDjase en direcci\xF3n
+    a la ubicaci\xF3n, retirando la mercader\xEDa asignada de manera correcta."
+  - "A continuaci\xF3n aprender\xE1s como utilizar el equipo de voz, podr\xE1s ver
+    el equipo, rotarlo e interactuar con \xE9l, para ir completando los pasos. Selecciona
+    continuar para iniciar la din\xE1mica."
+  - Comprobar
+  - Siguiente
+  - 'Marque los 3 primeros requerimientos para el inicio del proceso de alisto '
+  - A. Traer desde su casa la mascarilla puesta.
+  - B. Realizar la marca en el reloj asignado.
+  - "C. Revisar su equipo log\xEDstico con el formato asignado."
+  - D. Cumplir protocolo de Covid.
+  - E. Dejar sus pertenencias en los lockers asignados.
+  - Respuesta correcta
+  - "Antes de realizar cualquier trabajo peligroso, verifica que cuentas con la capacitaci\xF3n,
+    autorizaci\xF3n y los equipos necesarios para llevarlo a cabo de forma segura
+    (herramientas, equipos de protecci\xF3n personal)."
+  - Trabajos en alturas superior a 2 metros.
+  - "Trabajo en Espacios Confinados: es todo espacio que no es apto para la permanencia
+    de personas y no fue dise\xF1ado para tal fin (Por ejemplo: tanques, fosas, alcantarillas,
+    etc.). "
+  - "Trabajos de Excavaci\xF3n: esta clase de trabajos NO debe ser realizado por
+    nuestros asociados, para ello deben contratarse Proveedores calificados."
+  - "Para trabajos peligrosos aseg\xFArate de cumplir todo lo que se establece en
+    el permiso para trabajos peligrosos."
+  - Continuar
+  - "Presiona \"Siguiente\" para continuar o presiona el bot\xF3n de reproducir para
+    repasar el v\xEDdeo."
+  - "\xA1Bien hecho! Has completado la Estaci\xF3n 1. "
+  - "Para regresar al men\xFA, presiona \"Men\xFA\""
+  - "Para volver a repasar toda la estaci\xF3n, presiona \"Reiniciar\""
+  - "Para ir al siguiente estaci\xF3n, presiona \"Continuar\""
+  - Respuestas incorrectas
+  - Para poder continuar, debes responder las trivias correctamente.
+  - "Para volver a repasar toda la estaci\xF3n, presiona \"Reiniciar\""
+  - Para reintentar responder la trivia, presiona "Reintentar"
+  - Reintentar
+  - "SELECCI\xD3N M\xDALTIPLE"
+  - "\xA1Bien hecho! Has completado la Din\xE1mica 01. "
+  - "Din\xE1mica 01: Equipo de Voz"

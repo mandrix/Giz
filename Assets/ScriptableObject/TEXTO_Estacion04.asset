@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db2d2f3f4b0dc4499598d8372dec02, type: 3}
+  m_Name: TEXTO_Estacion04
+  m_EditorClassIdentifier: 
+  texts:
+  - "Estaci\xF3n 04: Estibado no eficiente"
+  - Siguiente
+  - "Men\xFA"
+  - Reiniciar
+  - A. Lado izquierdo
+  - B. Lado derecho
+  - C. Cualquiera de los dos lados
+  - "\xBFEl equipo de que lado del pasillo debe ir siempre?"
+  - "A. Realice el alto y toque la bocina cada vez que vaya a pasar un t\xFAnel o
+    se termine un pasillo. "
+  - "B. Conducir con las u\xF1as mirando hacia atr\xE1s excepto cuando deja la mercader\xEDa
+    en el and\xE9n."
+  - Siguiente
+  - 'Elija 2 actos seguros que se deben practicar '
+  - Identifique 2 estibados no conformes
+  - Comprobar
+  - "A continuaci\xF3n reconocer\xE1 pallets da\xF1ados o en buen estado, podr\xE1
+    seleccionar los pallets en orden y rotarlos en busca de defectos. Seleccione
+    continuar para iniciar la din\xE1mica, e identificar los pallets de manera correcta."
+  - "Persona utilizando el arn\xE9s"
+  - Respuestas correctas
+  - Respuesta correcta
+  - Reiniciar
+  - Continuar
+  - "Presiona \"Siguiente\" para continuar o presiona el bot\xF3n de reproducir para
+    repasar el v\xEDdeo."
+  - "\xA1Bien hecho! Has completado la Estaci\xF3n 4. "
+  - "Para regresar al men\xFA, presiona \"Men\xFA\""
+  - Continuar
+  - "Presiona \"Siguiente\" para continuar o presiona el bot\xF3n de reproducir para
+    repasar el v\xEDdeo."
+  - "\xA1Bien hecho! Has completado la Estaci\xF3n 4. "
+  - "Para regresar al men\xFA, presiona \"Men\xFA\""
+  - "Para volver a repasar toda la estaci\xF3n, presiona \"Reiniciar\""
+  - "Para ir al siguiente estaci\xF3n, presiona \"Continuar\""
+  - Respuestas incorrectas
+  - Para poder continuar, debes responder las trivias correctamente.
+  - "Para volver a repasar toda la estaci\xF3n, presiona \"Reiniciar\""
+  - Para reintentar responder la trivia, presiona "Reintentar"
+  - Reintentar
+  - "SELECCI\xD3N M\xDALTIPLE"
