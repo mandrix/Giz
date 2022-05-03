@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Dog
   m_EditorClassIdentifier: 
   groupName: dog
-  description: dog, incorrecto
+  description: Wolf, incorrecto
   idGroups: 0
   shade: {fileID: 0}
