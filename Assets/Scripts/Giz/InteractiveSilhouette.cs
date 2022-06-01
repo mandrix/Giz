@@ -7,8 +7,6 @@ public class InteractiveSilhouette : MonoBehaviour
 {
     #region Variables
     public Silhouette silhouette;
-    public GameObject ui;
-    public GameObject nextPhase;
     public GameFlow gameFlow;
 
     private Vector3 scale;
@@ -26,7 +24,6 @@ public class InteractiveSilhouette : MonoBehaviour
         
     }
 
-
     private void OnMouseExit()
     {
         transform.localScale = scale;
@@ -36,12 +33,9 @@ public class InteractiveSilhouette : MonoBehaviour
     {
         transform.localScale = scale;
         transform.localScale *= 1.05f;
-        if(silhouette.idGroups == gameFlow.GetStep())
-        {
-            nextPhase.SetActive(true);
-        }
-        ui.SetActive(true);
-        ui.GetComponentsInChildren<TMP_Text>()[0].text = silhouette.description;
+        gameFlow.CheckAnswer(silhouette.id);
+       
+        //ui.GetComponentsInChildren<TMP_Text>()[0].text = silhouette.description;
     }
     #endregion
 }

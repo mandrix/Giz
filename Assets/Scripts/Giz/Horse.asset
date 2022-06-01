@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acce787a32bacf845a41750b0506d9e2, type: 3}
   m_Name: Horse
   m_EditorClassIdentifier: 
-  groupName: horse
   description: horse, correcto!
-  idGroups: 2
-  shade: {fileID: 0}
+  id: 5
+  group: 
+  especie: 
+  silhouette: {fileID: 0}

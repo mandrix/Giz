@@ -5,9 +5,14 @@ using UnityEngine.UI;
 public class Silhouette : ScriptableObject
 {
     [InspectorName("Silhouette")]
-    public string groupName;
 
     public string description;
-    public int idGroups;
-    public Sprite shade;
-} 
+    public int id;
+    public string group; // + icono + description
+    public string especie; // + icono + description
+    public Sprite groupIcono; // + icono + description
+    public Sprite especieIcono;
+    public string groupDescription; // + icono + description
+    public string especieDescription;
+    public Sprite silhouette; 
+}

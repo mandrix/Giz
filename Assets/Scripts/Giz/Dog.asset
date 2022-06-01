@@ -12,7 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acce787a32bacf845a41750b0506d9e2, type: 3}
   m_Name: Dog
   m_EditorClassIdentifier: 
-  groupName: dog
   description: Wolf, incorrecto
-  idGroups: 0
-  shade: {fileID: 0}
+  id: 1
+  group: perrunos
+  especie: perro
+  groupIcono: {fileID: 21300000, guid: 983d94b5ee287a44fae6fb8f25f38c00, type: 3}
+  especieIcono: {fileID: 21300000, guid: 3895b949866055a44b5787f7b599254a, type: 3}
+  groupDescription: " La tecnolog\xEDa es un excelente aliado para el monitoreo,
+    ahora revisaremos la c\xE1mara trampa que colocamos aqu\xED hace unas semanas,
+    es importante hacerlo peri\xF3dicamente para vaciar la memoria y asegurar que
+    las bater\xEDas funcionan. Adem\xE1s, \xA1qu\xE9 emocionante saber que animal
+    ha  por aqu\xED! "
+  especieDescription: " La tecnolog\xEDa es un excelente aliado para el monitoreo,
+    ahora revisaremos la c\xE1mara trampa que colocamos aqu\xED hace unas semanas,
+    es importante hacerlo peri\xF3dicamente para vaciar la memoria y asegurar que
+    las bater\xEDas funcionan. Adem\xE1s, \xA1qu\xE9 emocionante saber que animal
+    ha pasado por aqu\xED! "
+  silhouette: {fileID: 0}
