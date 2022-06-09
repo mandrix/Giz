@@ -6232,6 +6232,7 @@ public class iTween : MonoBehaviour
 				hashTable.Add(args[i], args[i+1]);
 				i += 2;
 			}
+			Debug.Log(hashTable);
 			return hashTable;
 		}
 	}	

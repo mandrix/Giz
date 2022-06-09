@@ -78,6 +78,7 @@ public class GameFlow : MonoBehaviour
             ActivateInfoAnimalUi();
             if (isTest)
             {
+                //audioLose.clip = ;
                 audioLose.Play();
             }
         }

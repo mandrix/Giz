@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/MenuInicial.unity
-    guid: d784d604f7356bc46b9fb331d1797384
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Trivias/Estacion04Trivia.unity
     guid: 25472cd4d35d90548951d2bfdc5250a3
@@ -42,8 +42,35 @@ EditorBuildSettings:
     path: Assets/Scenes/Giz menu.unity
     guid: 4894c2d687bc21e43be19bb7d0303fff
   - enabled: 1
-    path: Assets/Scenes/Giz3D.unity
+    path: Assets/Scenes/GizNiv1.unity
     guid: e203bbeed6891b249a79a9dd09a97fed
+  - enabled: 1
+    path: Assets/Scenes/GizNiv2.unity
+    guid: 22a0c3ea082bf254da31e604d43b998a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/GizNiv3.unity
+    guid: d2f06e58527aa3d49bebc44af605032e
+  - enabled: 1
+    path: Assets/Scenes/GizNiv4.unity
+    guid: 335609de20d38c144b437914c7e18c04
+  - enabled: 1
+    path: Assets/Scenes/GizNiv5.unity
+    guid: b0cbd09f291f6c349ae5dccee83799df
+  - enabled: 1
+    path: Assets/Scenes/GizNiv6.unity
+    guid: 29d86ca1243e4d14fb3d6fc98a833e84
   m_configObjects:
     WebXR.Settings: {fileID: 11400000, guid: 8dd5a2e68ed1db9428d000ee9601eb17, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 55bc64c84b38a634ead713d3c734f358,

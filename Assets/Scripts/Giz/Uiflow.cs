@@ -10,6 +10,8 @@ public class Uiflow : MonoBehaviour
     private GameObject menuUI;
     [SerializeField]
     private GameObject instructionUI;
+    [SerializeField]
+    private GameObject selecterLvl;
 
     #endregion
 
@@ -25,9 +27,9 @@ public class Uiflow : MonoBehaviour
 
     #region Custom Methods
 
-    public void ChangeScene()
+    public void ChangeScene(string newScene)
     {
-        SceneManager.LoadScene("Giz3D");
+        SceneManager.LoadScene(newScene);
     }
 
 
@@ -42,6 +44,12 @@ public class Uiflow : MonoBehaviour
         Debug.Log("intruc");
         DeactivateAllUi();
         instructionUI.SetActive(true);
+    }
+    public void ActivateSelecterLvl()
+    {
+        Debug.Log("lvl selecter");
+        DeactivateAllUi();
+        selecterLvl.SetActive(true);
     }
     #endregion
 
