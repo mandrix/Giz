@@ -10,75 +10,85 @@ public class GameFlowLvl1 : MonoBehaviour
 
     #region Variables
     [SerializeField]
-    private AudioSource firstAudio;
-    [SerializeField]
     private GameObject[] invertebratesList;
     [SerializeField]
-    public GameObject infoUi;
+    private GameObject phaseZoom;
     [SerializeField]
-    public GameObject finalUi;
+    private GameObject indicacion1;
     [SerializeField]
-    private AudioSource finalAudio;
+    private GameObject indicacion2;
     [SerializeField]
-    private GameObject selecterLvl;
+    private GameObject shade;
+    [SerializeField]
+    private bool stop = false;
+    [SerializeField]
+    private AudioSource audioManager;
+    [SerializeField]
+    private DinamicAudios audioList;
     #endregion
-
-    #region Unity Methods
-    void Start()
-    {
-        firstAudio.Play();
-        StartCoroutine(ActivateAInvertebrate(0));
-        DeactivateAllUi();
-    }
-    #endregion
-
 
 
     #region Custom Methods
-    private void DeactivateAllUi()
-    {
-        selecterLvl.SetActive(false);
-        infoUi.SetActive(false);
-        finalUi.SetActive(false);
-    }
-    public void ActivateSelecterLvl()
-    {
-        Debug.Log("lvl selecter");
-        DeactivateAllUi();
-        selecterLvl.SetActive(true);
-    }
-    public void ActivateInfoUI()
+    public void ActivatePhaseZoom()
     {
         DeactivateAllUi();
-        finalAudio.Play();
-        infoUi.SetActive(true);
-    }
-    public void ActivateFinalUI()
-    {
-        DeactivateAllUi();
-        finalUi.SetActive(true);
-
-    }
-    public void ChangeScene(string newScene)
-    {
-        SceneManager.LoadScene(newScene);
+        phaseZoom.SetActive(true);
     }
 
-    private void Activate(int index)
+    public void DeactivateAllUi()
     {
-        Debug.Log("entra2;");
-        
+        phaseZoom.SetActive(false);
+        indicacion1.SetActive(false);
+        indicacion2.SetActive(false);
+        shade.SetActive(false);
+    }
+
+    public void ActivateIndicacion1()
+    {
+        DeactivateAllUi();
+        audioManager.clip = audioList.AudiosList[0];
+        audioManager.Play();
+        shade.SetActive(true);
+        indicacion1.SetActive(true);
+    }
+    public void ActivateIndicacion2()
+    { 
+        DeactivateAllUi();
+        shade.SetActive(true);
+        audioManager.clip = audioList.AudiosList[1];
+        audioManager.Play();
+        indicacion2.SetActive(true);
+    }
+    public void ActivateScene()
+    {
+        stop = false;
+        DeactivateAllUi();
+        StartCoroutine(ActivateAInvertebrate(0));
+    }
+
+    public void StopScene()
+    {
+        stop = true;
     }
 
     private IEnumerator ActivateAInvertebrate(int index)
     {
-        Debug.Log("entra");
-        yield return new WaitForSeconds(5);
-        if (invertebratesList.Length > index)
+        if (stop)
         {
-            Debug.Log(index);
-            invertebratesList[index].SetActive(true);
-            StartCoroutine(ActivateAInvertebrate(index + 1));
+            Debug.Log("no");
+            yield return new WaitForSeconds(1);
+        }
+        else
+        {
+            Debug.Log("si");
+            yield return new WaitForSeconds(5);
+
+            if (invertebratesList.Length > index)
+            {
+                Debug.Log(index);
+                invertebratesList[index].SetActive(true);
+                StartCoroutine(ActivateAInvertebrate(index + 1));
+            }
         }
     }
     #endregion

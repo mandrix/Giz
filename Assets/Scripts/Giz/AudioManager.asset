@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab0c0a97af599244aa113b18bd89f8a, type: 3}
   m_Name: AudioManager
   m_EditorClassIdentifier: 
-  firstAudioInvertebrados: {fileID: 8300000, guid: 4a3efd3446693c7409042cfd291f64d1,
+  firstAudioInvertebrados: {fileID: 8300000, guid: 9fb18bc1bcf03434ca0643be648f9989,
     type: 3}
+  firstAudioEscarabajos: {fileID: 8300000, guid: 0123f03285c1af946b3c876dcf917f60,
+    type: 3}
+  firstAudioFlora: {fileID: 8300000, guid: b3e7e698894d0084193412a613b4511b, type: 3}
+  finalAudioInvertebrados: {fileID: 8300000, guid: 5a131b953f796e846a2c191f9b1f6baa,
+    type: 3}
+  finalAudioEscarabajos: {fileID: 8300000, guid: 295ed4a7a331b1549a6456aecca7a5ec,
+    type: 3}
+  finalAudioFlora: {fileID: 8300000, guid: 5a131b953f796e846a2c191f9b1f6baa, type: 3}

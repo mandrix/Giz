@@ -71,6 +71,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GizNiv6.unity
     guid: 29d86ca1243e4d14fb3d6fc98a833e84
+  - enabled: 1
+    path: Assets/Scenes/Giz tutorial.unity
+    guid: 981e9cecc9e535a458f116fd24453920
   m_configObjects:
     WebXR.Settings: {fileID: 11400000, guid: 8dd5a2e68ed1db9428d000ee9601eb17, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 55bc64c84b38a634ead713d3c734f358,

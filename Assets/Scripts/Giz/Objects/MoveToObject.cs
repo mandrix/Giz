@@ -10,6 +10,7 @@ public class MoveToObject : MonoBehaviour
     [Range(0,5)]
     private float timeToReachTarget = 1;
 
+    [SerializeField]
     private bool move = false;
     private float t;
     Vector3 startPosition;
@@ -29,9 +30,11 @@ public class MoveToObject : MonoBehaviour
             transform.position = Vector3.Lerp(startPosition, target, t);
         }
         else {
+            /*
             target = obj.transform.position;
             t += Time.deltaTime / timeToReachTarget;
             transform.position = Vector3.Lerp(transform.position, startPosition, t);
+            */
         }
     }
 
@@ -45,8 +48,16 @@ public class MoveToObject : MonoBehaviour
 
     private void OnMouseUp()
     {
+        Debug.Log("move");
         if (!alreadyMove)
         {
+            startPosition = transform.position;
+            transform.GetComponent<MovementAnts>().StopMovement();
+            iTween.RotateBy(gameObject, iTween.Hash("z", 1, "loopType", "Loop", "delay", -0.2, "time", 5));
+            transform.SetParent(obj.transform);
+            transform.position = new Vector3(0, 0, 0);
+            transform.localScale = new Vector3(1, 1, 1);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
             t = 0;
             move = true;
             alreadyMove = true;
