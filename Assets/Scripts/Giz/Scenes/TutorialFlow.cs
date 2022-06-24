@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialFlow : MonoBehaviour
 {
@@ -8,15 +9,17 @@ public class TutorialFlow : MonoBehaviour
     [SerializeField]
     private GameObject welcomeUI;
     [SerializeField]
+    private GameObject welcomeUI2;
+    [SerializeField]
     private GameObject indicacion1;
     [SerializeField]
     private GameObject indicacion2;
     [SerializeField]
+    public GameObject InfoUi; // esta info sera para cada escena por aparte dependiendo del grupo/especie
+    [SerializeField]
     private GameObject finalUi;
     [SerializeField]
     private GameObject animal;
-    [SerializeField]
-    private GameObject shade;
     [SerializeField]
     private AudioSource audioManager;
     [SerializeField]
@@ -36,9 +39,9 @@ public class TutorialFlow : MonoBehaviour
     {
         indicacion1.SetActive(false);
         indicacion2.SetActive(false);
-        shade.SetActive(false);
-        animal.SetActive(false);
+        InfoUi.SetActive(false);
         welcomeUI.SetActive(false);
+        welcomeUI2.SetActive(false);
         finalUi.SetActive(false);
     }
 
@@ -47,15 +50,28 @@ public class TutorialFlow : MonoBehaviour
         DeactivateAllUi();
         audioManager.clip = audioList.AudiosList[0];
         audioManager.Play();
-        shade.SetActive(true);
         welcomeUI.SetActive(true);
     }
-    public void ActivateIndicacion1()
+    public void ActivateWelcome2()
     {
         DeactivateAllUi();
         audioManager.clip = audioList.AudiosList[1];
         audioManager.Play();
-        shade.SetActive(true);
+        welcomeUI2.SetActive(true);
+    }
+    public void ActivateInfoUI()
+    {
+
+        DeactivateAllUi();
+        audioManager.clip = audioList.AudiosList[2];
+        audioManager.Play();
+        InfoUi.SetActive(true);
+    }
+    public void ActivateIndicacion1()
+    {
+        DeactivateAllUi();
+        audioManager.clip = audioList.AudiosList[2];
+        audioManager.Play();
         indicacion1.SetActive(true);
     }
     public void ActivateAnimal()
@@ -66,18 +82,20 @@ public class TutorialFlow : MonoBehaviour
     public void ActivateIndicacion2()
     {
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[2];
+        audioManager.clip = audioList.AudiosList[3];
         audioManager.Play();
-        shade.SetActive(true);
         indicacion2.SetActive(true);
     }
     public void ActivateFinalUi()
     {
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[3];
+        audioManager.clip = audioList.AudiosList[4];
         audioManager.Play();
-        shade.SetActive(true);
         finalUi.SetActive(true);
+    }
+    public void ChangeScene(string newScene)
+    {
+        SceneManager.LoadScene(newScene);
     }
     public void ActivatePhaseTutorialCamera()
     {

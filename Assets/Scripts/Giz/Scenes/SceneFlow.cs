@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneFlow : MonoBehaviour
 {
@@ -16,8 +14,6 @@ public class SceneFlow : MonoBehaviour
     [SerializeField]
     public GameObject finalUi; // ui para continuar/reiniciar/salir/menu/selectar un lvl
     [SerializeField]
-    private GameObject shade;// esfera para oscurecer la pantalla
-    [SerializeField]
     public AudioSource audioManager; // el audio el cual le cambiaremos el sonido que ocupemos
     [SerializeField]
     private GameObject selecterLvl; // el ui para selectar un lvl
@@ -29,7 +25,6 @@ public class SceneFlow : MonoBehaviour
     void Start()
     {
         DeactivateAllUi();
-        shade.SetActive(true);
         firstInfoUi.SetActive(true);
         audioManager.clip = audioList.getFirstAudio(sceneIndex);
         audioManager.Play();        
@@ -43,7 +38,6 @@ public class SceneFlow : MonoBehaviour
         firstInfoUi.SetActive(false);
         InfoUi.SetActive(false);
         finalUi.SetActive(false);
-        shade.SetActive(false);
     }
     public void ActivateSelecterLvl()
     {
@@ -57,7 +51,6 @@ public class SceneFlow : MonoBehaviour
         audioManager.clip = audioList.getFinalAudio(sceneIndex);
         audioManager.Play();
         InfoUi.SetActive(true);
-        shade.SetActive(true);
     }
     public void ActivateFinalUI()
     {

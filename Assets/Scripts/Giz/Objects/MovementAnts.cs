@@ -5,44 +5,45 @@ using UnityEngine;
 public class MovementAnts : MonoBehaviour
 {
     [SerializeField]
+    private GameObject antHill;
+    [SerializeField]
     private GameObject obj;
     [SerializeField]
     [Range(0, 5)]
     private float timeToReachTarget = 1;
 
-    [SerializeField]
-    private bool move = false;
     private float t;
     Vector3 startPosition;
     public Vector3 target;
-    private bool stop = false;
     void Start()
     {
         startPosition = target = transform.position;
+        target = antHill.transform.position;
+    }
+
+    private void OnMouseUp()
+    {
+            startPosition = transform.position;
+            transform.SetParent(obj.transform);
+            transform.position = new Vector3(0, 0, 0);
+            transform.localScale = new Vector3(1, 1, 1);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            target = obj.transform.position;
+            t = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!stop)
-        {
-            target = obj.transform.position;
             t += Time.deltaTime / timeToReachTarget;
             transform.position = Vector3.Lerp(startPosition, target, t);
-        }
-        
     }
 
-
-    public void StopMovement()
-    {
-        stop = true;
-    }
     public void SetDestination(GameObject destination, float time)
     {
         t = 0;
         startPosition = transform.position;
         timeToReachTarget = time;
-        obj = destination;
+        antHill = destination;
     }
 }

@@ -30,11 +30,9 @@ public class MoveToObject : MonoBehaviour
             transform.position = Vector3.Lerp(startPosition, target, t);
         }
         else {
-            /*
             target = obj.transform.position;
             t += Time.deltaTime / timeToReachTarget;
             transform.position = Vector3.Lerp(transform.position, startPosition, t);
-            */
         }
     }
 
@@ -52,12 +50,10 @@ public class MoveToObject : MonoBehaviour
         if (!alreadyMove)
         {
             startPosition = transform.position;
-            transform.GetComponent<MovementAnts>().StopMovement();
-            iTween.RotateBy(gameObject, iTween.Hash("z", 1, "loopType", "Loop", "delay", -0.2, "time", 5));
-            transform.SetParent(obj.transform);
+            /*transform.SetParent(obj.transform);
             transform.position = new Vector3(0, 0, 0);
             transform.localScale = new Vector3(1, 1, 1);
-            transform.rotation = new Quaternion(0, 0, 0, 0);
+            transform.rotation = new Quaternion(0, 0, 0, 0);*/
             t = 0;
             move = true;
             alreadyMove = true;
@@ -65,10 +61,9 @@ public class MoveToObject : MonoBehaviour
         else if (move)
         {
             t = 0;
-            move = false;
-            alreadyMove = move;
+            alreadyMove = move = false;
         }
-            
+
         /*
         switch (loopType)
         {
@@ -89,6 +84,6 @@ public class MoveToObject : MonoBehaviour
         float z = obj.transform.position.z - transform.position.z;
         Debug.Log(x + " " + y + " " + z);
         */
-       // iTween.MoveBy(gameObject, iTween.Hash("x", 0, "y", 10, "z", -22.5f, "easeType", "easeInOutExpo", "loopType", loopType, "delay", .1, "time", time));
+        // iTween.MoveBy(gameObject, iTween.Hash("x", 0, "y", 10, "z", -22.5f, "easeType", "easeInOutExpo", "loopType", loopType, "delay", .1, "time", time));
     }
 }

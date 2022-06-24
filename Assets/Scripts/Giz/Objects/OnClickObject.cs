@@ -12,6 +12,7 @@ public class OnClickObject : MonoBehaviour
     {
         if (isCorrect)
         {
+            script.gameObject.GetComponent<GameFlowLvl1>().StopScene();
             script.ActivateInfoUI();
         }
     }

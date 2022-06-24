@@ -7,76 +7,41 @@ public class GameFlowLvl2 : MonoBehaviour
 {
     #region Variables
     [SerializeField]
-    private AudioSource firstAudio;
+    private GameObject indicacion1;
     [SerializeField]
-    private GameObject[] invertebratesList;
+    private GameObject traps;
     [SerializeField]
-    public GameObject infoUi;
+    private AudioSource audioManager;
     [SerializeField]
-    public GameObject finalUi;
-    [SerializeField]
-    private AudioSource finalAudio;
-    [SerializeField]
-    private GameObject selecterLvl;
+    private DinamicAudios audioList;
     #endregion
 
     #region Unity Methods
-    void Start()
-    {
-        firstAudio.Play();
-        StartCoroutine(ActivateAInvertebrate(0));
-        DeactivateAllUi();
-    }
     #endregion
 
-
+    public void ActivateIndicacion1()
+    {
+        DeactivateAllUi();
+        audioManager.clip = audioList.AudiosList[0];
+        audioManager.Play();
+        indicacion1.SetActive(true);
+    }
 
     #region Custom Methods
-    private void DeactivateAllUi()
-    {
-        selecterLvl.SetActive(false);
-        infoUi.SetActive(false);
-        finalUi.SetActive(false);
-    }
-    public void ActivateSelecterLvl()
-    {
-        Debug.Log("lvl selecter");
-        DeactivateAllUi();
-        selecterLvl.SetActive(true);
-    }
-    public void ActivateInfoUI()
+    public void ActivateTraps()
     {
         DeactivateAllUi();
-        finalAudio.Play();
-        infoUi.SetActive(true);
+        traps.SetActive(true);
     }
-    public void ActivateFinalUI()
+    public void DeactivateAllUi()
     {
-        DeactivateAllUi();
-        finalUi.SetActive(true);
+        indicacion1.SetActive(false);
+        traps.SetActive(false);
 
     }
     public void ChangeScene(string newScene)
     {
         SceneManager.LoadScene(newScene);
-    }
-
-    private void Activate(int index)
-    {
-        Debug.Log("entra2;");
-
-    }
-
-    private IEnumerator ActivateAInvertebrate(int index)
-    {
-        Debug.Log("entra");
-        yield return new WaitForSeconds(5);
-        if (invertebratesList.Length > index)
-        {
-            Debug.Log(index);
-            invertebratesList[index].SetActive(true);
-            StartCoroutine(ActivateAInvertebrate(index + 1));
-        }
     }
     #endregion
 
