@@ -19,13 +19,15 @@ public class SceneFlow : MonoBehaviour
     private GameObject selecterLvl; // el ui para selectar un lvl
     [SerializeField]
     private int sceneIndex; // el indice de la escena donde estoy (auxiliar para los audios)
+    [SerializeField]
+    private GameObject pivotUi; // ayuda para setear el UI
     #endregion
 
     #region Unity Methods
     void Start()
     {
         DeactivateAllUi();
-        firstInfoUi.SetActive(true);
+        ActivateUI(firstInfoUi);
         audioManager.clip = audioList.getFirstAudio(sceneIndex);
         audioManager.Play();        
     }
@@ -42,7 +44,8 @@ public class SceneFlow : MonoBehaviour
     public void ActivateSelecterLvl()
     {
         DeactivateAllUi();
-        selecterLvl.SetActive(true);
+        ActivateUI(selecterLvl);
+        
     }
     public void ActivateInfoUI()
     {
@@ -50,12 +53,23 @@ public class SceneFlow : MonoBehaviour
         //DeactivateAllUi();
         audioManager.clip = audioList.getFinalAudio(sceneIndex);
         audioManager.Play();
-        InfoUi.SetActive(true);
+        ActivateUI(InfoUi);
     }
     public void ActivateFinalUI()
     {
         DeactivateAllUi();
-        finalUi.SetActive(true);
+        ActivateUI(finalUi);
+    }
+    public void ActivateUI(GameObject ui)
+    {
+        DeactivateAllUi();
+        Quaternion rotate = pivotUi.transform.rotation;
+        Vector3 position = pivotUi.transform.position;
+        rotate.x = 0;
+        rotate.z = 0;
+        //position.y = transform.position.y;
+        ui.transform.SetPositionAndRotation(position, rotate);
+        ui.SetActive(true);
     }
     public void ChangeScene(string newScene)
     {

@@ -9,7 +9,9 @@ public class GameFlowLvl2 : MonoBehaviour
     [SerializeField]
     private GameObject indicacion1;
     [SerializeField]
-    private GameObject traps;
+    private GameObject trap;
+    [SerializeField]
+    private GameObject animal;
     [SerializeField]
     private AudioSource audioManager;
     [SerializeField]
@@ -31,12 +33,13 @@ public class GameFlowLvl2 : MonoBehaviour
     public void ActivateTraps()
     {
         DeactivateAllUi();
-        traps.SetActive(true);
+        trap.GetComponent<AnimalResult>().SetReady();
+        trap.GetComponent<Trap>().SetReady();
+        trap.GetComponent<MoveToObject>().ToggleReady();
     }
     public void DeactivateAllUi()
     {
         indicacion1.SetActive(false);
-        traps.SetActive(false);
 
     }
     public void ChangeScene(string newScene)
@@ -45,5 +48,8 @@ public class GameFlowLvl2 : MonoBehaviour
     }
     #endregion
 
-
+    public void DeactiveAnimal()
+    {
+        animal.SetActive(false);
+    }
 }

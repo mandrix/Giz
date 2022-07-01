@@ -26,8 +26,14 @@ public class TutorialCamera : MonoBehaviour
         if(rotation != transform.rotation && !ready)
         {
             ready = true;
-            tutorial.ActivateIndicacion2();
-
+            StartCoroutine(CameraReady());
+       
         }
+    }
+
+    private IEnumerator CameraReady()
+    {
+        yield return new WaitForSeconds(5);
+        tutorial.ActivateIndicacion2();
     }
 }

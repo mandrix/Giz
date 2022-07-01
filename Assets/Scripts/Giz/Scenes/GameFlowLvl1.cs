@@ -23,6 +23,8 @@ public class GameFlowLvl1 : MonoBehaviour
     private AudioSource audioManager;
     [SerializeField]
     private DinamicAudios audioList;
+    [SerializeField]
+    private GameObject pivotUi;
     #endregion
 
 
@@ -66,6 +68,12 @@ public class GameFlowLvl1 : MonoBehaviour
         stop = true;
     }
 
+    private void ActivateUI(GameObject ui)
+    {
+        DeactivateAllUi();
+        ui.transform.SetPositionAndRotation(pivotUi.transform.position, pivotUi.transform.rotation);
+        ui.SetActive(true);
+    }
     private IEnumerator ActivateAInvertebrate(int index)
     {
         yield return new WaitForSeconds(5);

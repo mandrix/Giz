@@ -11,6 +11,8 @@ public class TutorialFlow : MonoBehaviour
     [SerializeField]
     private GameObject welcomeUI2;
     [SerializeField]
+    private GameObject welcomeUI3;
+    [SerializeField]
     private GameObject indicacion1;
     [SerializeField]
     private GameObject indicacion2;
@@ -26,11 +28,13 @@ public class TutorialFlow : MonoBehaviour
     private DinamicAudios audioList;
     [SerializeField]
     private TutorialCamera tutorialCamera;
+    [SerializeField]
+    private int indexAudio = 0;
     #endregion
 
     private void Start()
     {
-        ActivateWelcome();
+        ActivateWelcome2();
     }
 
     #region Custom Methods
@@ -42,56 +46,63 @@ public class TutorialFlow : MonoBehaviour
         InfoUi.SetActive(false);
         welcomeUI.SetActive(false);
         welcomeUI2.SetActive(false);
+        welcomeUI3.SetActive(false);
         finalUi.SetActive(false);
     }
 
     public void ActivateWelcome()
     {
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[0];
-        audioManager.Play();
+        nextAudio();
         welcomeUI.SetActive(true);
     }
     public void ActivateWelcome2()
     {
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[1];
-        audioManager.Play();
+        nextAudio();
         welcomeUI2.SetActive(true);
+    }
+    public void ActivateWelcome3()
+    {
+        DeactivateAllUi();
+        nextAudio();
+        welcomeUI3.SetActive(true);
     }
     public void ActivateInfoUI()
     {
 
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[2];
-        audioManager.Play();
+        nextAudio();
         InfoUi.SetActive(true);
     }
     public void ActivateIndicacion1()
     {
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[2];
-        audioManager.Play();
+        nextAudio();
         indicacion1.SetActive(true);
     }
     public void ActivateAnimal()
     {
         DeactivateAllUi();
-        animal.SetActive(true);
+        animal.GetComponent<TutorialAnt>().setFlag();
     }
     public void ActivateIndicacion2()
     {
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[3];
-        audioManager.Play();
+        nextAudio();
         indicacion2.SetActive(true);
     }
     public void ActivateFinalUi()
     {
         DeactivateAllUi();
-        audioManager.clip = audioList.AudiosList[4];
-        audioManager.Play();
+        nextAudio();
         finalUi.SetActive(true);
+    }
+    private void nextAudio()
+    {
+        audioManager.clip = audioList.AudiosList[indexAudio];
+        indexAudio++;
+        audioManager.Play();
     }
     public void ChangeScene(string newScene)
     {
@@ -106,3 +117,4 @@ public class TutorialFlow : MonoBehaviour
 
 
 }
+
