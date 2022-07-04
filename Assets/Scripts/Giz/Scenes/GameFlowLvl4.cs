@@ -4,15 +4,62 @@ using UnityEngine;
 
 public class GameFlowLvl4 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Variables
+    [SerializeField]
+    private GameObject phaseZoom;
+    [SerializeField]
+    private GameObject indicacion1;
+    [SerializeField]
+    private GameObject indicacion2;
+    [SerializeField]
+    private AudioSource audioManager;
+    [SerializeField]
+    private DinamicAudios audioList;
+    [SerializeField]
+    private GameObject pivotUi;
+    #endregion
+
+
+    #region Custom Methods
+    public void ActivatePhaseZoom()
     {
-        
+        DeactivateAllUi();
+        phaseZoom.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DeactivateAllUi()
     {
-        
+        phaseZoom.SetActive(false);
+        indicacion1.SetActive(false);
+        indicacion2.SetActive(false);
     }
+
+    public void ActivateIndicacion1()
+    {
+        DeactivateAllUi();
+        audioManager.clip = audioList.AudiosList[0];
+        audioManager.Play();
+        indicacion1.SetActive(true);
+    }
+    public void ActivateIndicacion2()
+    {
+        DeactivateAllUi();
+        audioManager.clip = audioList.AudiosList[1];
+        audioManager.Play();
+        indicacion2.SetActive(true);
+    }
+    public void ActivateScene()
+    {
+        DeactivateAllUi();
+    }
+
+    private void ActivateUI(GameObject ui)
+    {
+        DeactivateAllUi();
+        ui.transform.SetPositionAndRotation(pivotUi.transform.position, pivotUi.transform.rotation);
+        ui.SetActive(true);
+    }
+    #endregion
+
+
 }

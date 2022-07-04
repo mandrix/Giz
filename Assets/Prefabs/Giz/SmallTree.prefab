@@ -540,8 +540,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7116241, y: 17.618565, z: 4.3333006}
-  m_Center: {x: -0.23027802, y: -5.516321, z: -0.2925365}
+  m_Size: {x: 4.05542, y: 19.280596, z: 5.3119135}
+  m_Center: {x: -0.015380859, y: -4.6853056, z: -0.39244604}
 --- !u!114 &5666085042307765761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,7 +568,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeInfo: {fileID: 8973182779897901680}
-  inactiveTrees: 0
+  leaf: {fileID: 0}
+  leafSpot: {fileID: 0}
   flow: {fileID: 0}
   isActive: 0
 --- !u!1 &8973182779897901680
