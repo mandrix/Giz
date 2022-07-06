@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameFlow : MonoBehaviour
 {
@@ -8,25 +10,46 @@ public class GameFlow : MonoBehaviour
     [SerializeField]
     private GameObject panel;
     [SerializeField]
-    private GameObject menuUI;
+    private GameObject silhouette;
     [SerializeField]
-    private GameObject group1;
+    private Image silhouetteUI;
     [SerializeField]
-    private GameObject silhouette1;
+    private GameObject instructionText;
     [SerializeField]
-    private GameObject buttonAcceptSilhouettes1;
+    public GameObject infoUi;
     [SerializeField]
-    private GameObject group2;
+    public GameObject infoText;
     [SerializeField]
-    private GameObject silhouette2;
+    public GameObject infoBtnEspecieText;
     [SerializeField]
-    private GameObject buttonAcceptSilhouettes2;
+    public GameObject infoBtnGroupText;
     [SerializeField]
-    private GameObject instructionUI;
+    public GameObject infoTitle;
     [SerializeField]
-    public GameObject nextPhase;
+    public GameObject infoSpriteTitle;
+    [SerializeField]
+    public GameObject infoSpriteEspecieBtn;
+    [SerializeField]
+    public GameObject infoSpriteGroupBtn;
+    [SerializeField]
+    public GameObject finalUi;
     [SerializeField]
     private int step = 0;
+    [SerializeField]
+    private int rounds;
+    [SerializeField]
+    private Silhouette[] silhouetteList;
+    [SerializeField]
+    private AudioSource audioWin;
+    [SerializeField]
+    private AudioSource audioLose;
+    [SerializeField]
+    private bool isTest = false;
+    [SerializeField]
+    private string newInstructionText;
+    [SerializeField]
+    private GameObject pivotUi;
+
 
     #endregion
 
@@ -34,8 +57,9 @@ public class GameFlow : MonoBehaviour
     #region Unity Methods
     void Start()
     {
-        menuUI.SetActive(true);
+        ActivateSilhouette();
     }
+
     #endregion
 
 
@@ -44,57 +68,102 @@ public class GameFlow : MonoBehaviour
     {
         return step;
     }
+
+
+    public void CheckAnswer(int answer)
+    {
+        if (silhouetteList[step].id == answer)
+        {
+            isTest = false;
+            ActivateInfoAnimalUi();
+            if (isTest)
+            {
+                //audioLose.clip = ;
+                audioLose.Play();
+            }
+        }
+        else if (isTest)
+        {
+            audioLose.Play();
+        }
+
+    }
+
+    public void NextStep(){
+        step +=1;
+    }
+
     private void DeactivateAllUi()
     {
-        instructionUI.SetActive(false);
-        menuUI.SetActive(false);
-        group1.SetActive(false);
-        group2.SetActive(false);
-        silhouette1.SetActive(false);
-        silhouette2.SetActive(false);
-        buttonAcceptSilhouettes1.SetActive(false);
-        buttonAcceptSilhouettes2.SetActive(false);
+        infoUi.SetActive(false);
+        silhouette.SetActive(false);
         panel.SetActive(false);
-        nextPhase.SetActive(false);
     }
 
-    public void ActivateSilhouette1()
-    {
-        Debug.Log("sil1");
-        step = 1;
-        DeactivateAllUi();
-        buttonAcceptSilhouettes1.SetActive(true);
-        silhouette1.SetActive(true);
+    public void ActivateInfoAnimalUi()
+    {   
+        infoBtnEspecieText.GetComponent<TextMeshProUGUI>().text = silhouetteList[step].especie;
+        infoBtnGroupText.GetComponent<TextMeshProUGUI>().text = silhouetteList[step].group;
+        infoSpriteEspecieBtn.GetComponent<Image>().sprite = silhouetteList[step].especieIcono;
+        infoSpriteGroupBtn.GetComponent<Image>().sprite = silhouetteList[step].groupIcono;
+        ActivateInfoEspecie();
+        ActivateUI(infoUi);
     }
 
-    public void ActivateGroup1()
-    {
-        Debug.Log("g1");
-        DeactivateAllUi();
-        group1.SetActive(true);
+    public void ActivateInfoEspecie(){
+        infoSpriteTitle.GetComponent<Image>().sprite = silhouetteList[step].especieIcono;
+            infoText.GetComponent<TextMeshProUGUI>().text = silhouetteList[step].especieDescription;
+            infoTitle.GetComponent<TextMeshProUGUI>().text = silhouetteList[step].especie;
+         
     }
 
-    public void ActivateSilhouette2()
-    {
-        Debug.Log("sil2");
-        step = 2;
-        DeactivateAllUi();
-        buttonAcceptSilhouettes2.SetActive(true);
-        silhouette2.SetActive(true);
+    public void ActivateInfoGruop(){
+        infoSpriteTitle.GetComponent<Image>().sprite = silhouetteList[step].groupIcono;
+            infoText.GetComponent<TextMeshProUGUI>().text = silhouetteList[step].groupDescription;
+            infoTitle.GetComponent<TextMeshProUGUI>().text = silhouetteList[step].group;
+         
     }
 
-    public void ActivateGroup2()
+    private void ActivateUI(GameObject ui)
     {
-        Debug.Log("g1");
         DeactivateAllUi();
-        group2.SetActive(true);
+        ui.transform.SetPositionAndRotation(pivotUi.transform.position, pivotUi.transform.rotation);
+        ui.SetActive(true);
+    }
+    public void ActivateSilhouette()
+    {
+        if (step >= rounds)
+        {
+            ActivateUI(finalUi);
+        }
+        else
+        {
+            newInstructionText = "Enfoca tu busqueda en el grupo " + silhouetteList[step].group + " y la especie " + silhouetteList[step].especie + ".";
+            Debug.Log(instructionText);
+            Debug.Log(instructionText.GetComponent<TextMeshProUGUI>());
+            Debug.Log(instructionText.GetComponent<TextMeshProUGUI>().text);
+            instructionText.GetComponent<TextMeshProUGUI>().text = newInstructionText;
+            silhouetteUI.GetComponent<Image>().sprite = silhouetteList[step].silhouette;
+            ActivateUI(silhouette);
+        }
+    }
+
+
+
+
+
+
+    public void ActivateTest()
+    {
+
+        DeactivateAllUi();
+        isTest = true;
     }
 
     public void ActivateInstruccion()
     {
-        Debug.Log("intruc");
         DeactivateAllUi();
-        instructionUI.SetActive(true);
+        
     }
     #endregion
 

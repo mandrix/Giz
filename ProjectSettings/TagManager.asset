@@ -12,6 +12,7 @@ TagManager:
   - Cajas
   - Basura
   - Basurero
+  - Ant
   layers:
   - Default
   - TransparentFX

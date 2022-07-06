@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acce787a32bacf845a41750b0506d9e2, type: 3}
+  m_Name: Falcon
+  m_EditorClassIdentifier: 
+  description: Falcon
+  id: 3
+  group: voladores
+  especie: alas
+  groupIcono: {fileID: 21300000, guid: 9855f991a6fb01444b6a62ae65f5c997, type: 3}
+  especieIcono: {fileID: 21300000, guid: 2842988f4e4c18e49b629f950694dc2d, type: 3}
+  groupDescription: " utilizar\xE9 la observaci\xF3n en 360 grados, me coloco en
+    un punto fijo y anot\xF3 las aves que veo mientras gir\xF3 muy lentamente sobre
+    mi propio eje durante 30 min"
+  especieDescription: "Ahora utilizar\xE9 la observaci\xF3n en 360 grados, me coloco
+    en un punto fijo y anot\xF3 las aves que veo mientras gir\xF3 muy lentamente
+    sobre mi propio eje durante 30 min"
+  silhouette: {fileID: 21300000, guid: a5c3c59ffc46d4c4eb86e33b853078df, type: 3}

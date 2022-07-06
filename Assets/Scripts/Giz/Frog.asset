@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acce787a32bacf845a41750b0506d9e2, type: 3}
   m_Name: Frog
   m_EditorClassIdentifier: 
-  groupName: Frog
   description: Iguana, correcto!
-  idGroups: 1
-  shade: {fileID: 0}
+  id: 4
+  group: ranas
+  especie: ranitas
+  groupIcono: {fileID: 21300000, guid: da9a7f6d27a72bc40b0c522f7a241677, type: 3}
+  especieIcono: {fileID: 21300000, guid: fe6ec618d2ff7634eb2c30e9febc8bdc, type: 3}
+  groupDescription: " \xA1 el r\xEDo! Esta \xE1rea es perfecta para aplicar la identificaci\xF3n
+    visual en l\xEDnea recta, caminar\xE9 lentamente en l\xEDnea recta y observar\xE9
+    el suelo, hojarasca, troncos podridos, arbustos y ramas."
+  especieDescription: " \xA1Escucho el r\xEDo! Esta \xE1rea es perfecta para aplicar
+    la identificaci\xF3n visual en l\xEDnea recta, caminar\xE9 lentamente en l\xEDnea
+    recta y observar\xE9 el suelo, hojarasca, troncos podridos, arbustos y ramas."
+  silhouette: {fileID: 21300000, guid: 6b51ed6b46ecde34da622cd64a15ed2f, type: 3}
