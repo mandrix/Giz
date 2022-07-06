@@ -3375,7 +3375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1413885295, guid: 24677f96a651352459eb350ec97b786c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1871947506379212834, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
@@ -3570,7 +3570,7 @@ PrefabInstance:
     - target: {fileID: 6889285617125878430, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24677f96a651352459eb350ec97b786c, type: 3}
@@ -6478,6 +6478,7 @@ MonoBehaviour:
   audioList: {fileID: 11400000, guid: 9b4d1492770f21b4c8f33e1b940fa383, type: 2}
   tutorialCamera: {fileID: 1192521363}
   indexAudio: 0
+  pivotUi: {fileID: 578027377}
 --- !u!4 &1587064885
 Transform:
   m_ObjectHideFlags: 0

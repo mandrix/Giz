@@ -18,34 +18,28 @@ public class ActiveTreeInfo : MonoBehaviour
     static bool ready = false;
     private void Start()
     {
-        Debug.Log(transform.position + "  ffff  " + leafSpot.transform.position);
         ready = false;
-        Debug.Log(inactiveTrees);
         inactiveTrees += 1;
     }
     public void SetReady()
     {
-        Debug.Log(inactiveTrees);
         ready = true;
     }
     private void OnMouseUp()
     {
-        Debug.Log(inactiveTrees);
         if (!ready || isActive)
         {
             return;
         }
         isActive = true;
         inactiveTrees -= 1;
-        Debug.Log(inactiveTrees);
         treeInfo.SetActive(true);
         if (inactiveTrees == 0)
         {
-            Debug.Log("entra");
             ready = false;
             leaf.SetActive(true);
+            flow.transform.GetComponent<GameFlowLvl3>().DeactivateAllUi();
             flow.ActivateInfoUI();
-            Debug.Log(transform.position +"  ffff  " + leafSpot.transform.position);
             //leaf.transform.GetComponent<OnlyOneMove>().SetDestinationAndStart(transform.position, leafSpot.transform.position);
             leaf.GetComponent<AnimalRotateInfo>().RotateWithFunction();
         }

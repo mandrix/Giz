@@ -30,6 +30,8 @@ public class TutorialFlow : MonoBehaviour
     private TutorialCamera tutorialCamera;
     [SerializeField]
     private int indexAudio = 0;
+    [SerializeField]
+    private GameObject pivotUi; // ayuda para setear el UI
     #endregion
 
     private void Start()
@@ -53,33 +55,33 @@ public class TutorialFlow : MonoBehaviour
     public void ActivateWelcome()
     {
         DeactivateAllUi();
-        nextAudio();
-        welcomeUI.SetActive(true);
+        NextAudio();
+        ActivateUI(welcomeUI);
     }
     public void ActivateWelcome2()
     {
         DeactivateAllUi();
-        nextAudio();
-        welcomeUI2.SetActive(true);
+        NextAudio();
+        ActivateUI(welcomeUI2);
     }
     public void ActivateWelcome3()
     {
         DeactivateAllUi();
-        nextAudio();
-        welcomeUI3.SetActive(true);
+        NextAudio();
+        ActivateUI(welcomeUI3);
     }
     public void ActivateInfoUI()
     {
 
         DeactivateAllUi();
-        nextAudio();
-        InfoUi.SetActive(true);
+        NextAudio();
+        ActivateUI(InfoUi);
     }
     public void ActivateIndicacion1()
     {
         DeactivateAllUi();
-        nextAudio();
-        indicacion1.SetActive(true);
+        NextAudio();
+        ActivateUI(indicacion1);
     }
     public void ActivateAnimal()
     {
@@ -89,16 +91,16 @@ public class TutorialFlow : MonoBehaviour
     public void ActivateIndicacion2()
     {
         DeactivateAllUi();
-        nextAudio();
-        indicacion2.SetActive(true);
+        NextAudio();
+        ActivateUI(indicacion2);
     }
     public void ActivateFinalUi()
     {
         DeactivateAllUi();
-        nextAudio();
-        finalUi.SetActive(true);
+        NextAudio();
+        ActivateUI(finalUi);
     }
-    private void nextAudio()
+    private void NextAudio()
     {
         audioManager.clip = audioList.AudiosList[indexAudio];
         indexAudio++;
@@ -107,6 +109,17 @@ public class TutorialFlow : MonoBehaviour
     public void ChangeScene(string newScene)
     {
         SceneManager.LoadScene(newScene);
+    }
+    public void ActivateUI(GameObject ui)
+    {
+        DeactivateAllUi();
+        Quaternion rotate = pivotUi.transform.rotation;
+        Vector3 position = pivotUi.transform.position;
+        rotate.x = 0;
+        rotate.z = 0;
+        position.y = ui.transform.position.y;
+        ui.transform.SetPositionAndRotation(position, rotate);
+        ui.SetActive(true);
     }
     public void ActivatePhaseTutorialCamera()
     {

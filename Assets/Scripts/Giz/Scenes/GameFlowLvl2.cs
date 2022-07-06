@@ -16,6 +16,8 @@ public class GameFlowLvl2 : MonoBehaviour
     private AudioSource audioManager;
     [SerializeField]
     private DinamicAudios audioList;
+    [SerializeField]
+    private SceneFlow flow;
     #endregion
 
     #region Unity Methods
@@ -26,7 +28,7 @@ public class GameFlowLvl2 : MonoBehaviour
         DeactivateAllUi();
         audioManager.clip = audioList.AudiosList[0];
         audioManager.Play();
-        indicacion1.SetActive(true);
+        flow.ActivateUI(indicacion1);
     }
 
     #region Custom Methods

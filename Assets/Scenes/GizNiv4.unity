@@ -2336,7 +2336,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1057634284}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3617,7 +3617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 41278950, guid: 24677f96a651352459eb350ec97b786c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1413885295, guid: 24677f96a651352459eb350ec97b786c, type: 3}
       propertyPath: m_RootOrder
@@ -7080,7 +7080,7 @@ MonoBehaviour:
   indicacion2: {fileID: 1057634285}
   audioManager: {fileID: 159757277}
   audioList: {fileID: 11400000, guid: bc2fae799dfcef649bf52cbb1992bb6a, type: 2}
-  pivotUi: {fileID: 578027377}
+  flow: {fileID: 1587064886}
 --- !u!4 &1587064885
 Transform:
   m_ObjectHideFlags: 0

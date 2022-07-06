@@ -12,6 +12,8 @@ public class GameFlowLvl3 : MonoBehaviour
     [SerializeField]
     private GameObject indicacion2;
     [SerializeField]
+    private GameObject treeObject;
+    [SerializeField]
     private GameObject transecto;
     [SerializeField]
     private ActiveTreeInfo tree;
@@ -30,6 +32,7 @@ public class GameFlowLvl3 : MonoBehaviour
     {
         indicacion1.SetActive(false);
         indicacion2.SetActive(false);
+        treeObject.SetActive(false);
     }
 
     public void ActivateIndicacion1()
@@ -50,6 +53,7 @@ public class GameFlowLvl3 : MonoBehaviour
     public void ActivateScene()
     {
         DeactivateAllUi();
+        treeObject.SetActive(true);
         tree.SetReady();
     }
     #endregion

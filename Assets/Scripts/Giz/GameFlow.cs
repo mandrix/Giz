@@ -162,8 +162,6 @@ public class GameFlow : MonoBehaviour
 
     public void ActivateInstruccion()
     {
-        
-        Debug.Log("intruc");
         DeactivateAllUi();
         
     }

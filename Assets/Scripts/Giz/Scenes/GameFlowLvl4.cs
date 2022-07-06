@@ -16,7 +16,7 @@ public class GameFlowLvl4 : MonoBehaviour
     [SerializeField]
     private DinamicAudios audioList;
     [SerializeField]
-    private GameObject pivotUi;
+    private SceneFlow flow;
     #endregion
 
 
@@ -51,13 +51,6 @@ public class GameFlowLvl4 : MonoBehaviour
     public void ActivateScene()
     {
         DeactivateAllUi();
-    }
-
-    private void ActivateUI(GameObject ui)
-    {
-        DeactivateAllUi();
-        ui.transform.SetPositionAndRotation(pivotUi.transform.position, pivotUi.transform.rotation);
-        ui.SetActive(true);
     }
     #endregion
 

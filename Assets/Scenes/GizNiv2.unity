@@ -2595,27 +2595,27 @@ PrefabInstance:
     - target: {fileID: 1871947506379212835, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1871947506379212835, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1871947506379212835, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1871947506379212835, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -199.3
+      value: -211.1
       objectReference: {fileID: 0}
     - target: {fileID: 1871947506379212835, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -88.5
+      value: -123.4
       objectReference: {fileID: 0}
     - target: {fileID: 1871947506379212835, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
@@ -2645,12 +2645,12 @@ PrefabInstance:
     - target: {fileID: 5109140283252493454, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 750.3723
+      value: 705.23096
       objectReference: {fileID: 0}
     - target: {fileID: 5109140283252493454, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 533.032
+      value: 479.20996
       objectReference: {fileID: 0}
     - target: {fileID: 5109140283252493454, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
@@ -4389,6 +4389,7 @@ MonoBehaviour:
   animal: {fileID: 2079204588}
   audioManager: {fileID: 1229600069}
   audioList: {fileID: 11400000, guid: d857f3a4fb9ece245bb8b18b55e14a77, type: 2}
+  flow: {fileID: 1587064886}
 --- !u!4 &1587064885
 Transform:
   m_ObjectHideFlags: 0

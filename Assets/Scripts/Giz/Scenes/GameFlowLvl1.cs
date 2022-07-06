@@ -24,7 +24,7 @@ public class GameFlowLvl1 : MonoBehaviour
     [SerializeField]
     private DinamicAudios audioList;
     [SerializeField]
-    private GameObject pivotUi;
+    private SceneFlow flow;
     #endregion
 
 
@@ -47,14 +47,15 @@ public class GameFlowLvl1 : MonoBehaviour
         DeactivateAllUi();
         audioManager.clip = audioList.AudiosList[0];
         audioManager.Play();
-        indicacion1.SetActive(true);
+        flow.ActivateUI(indicacion1);
+        
     }
     public void ActivateIndicacion2()
     { 
         DeactivateAllUi();
         audioManager.clip = audioList.AudiosList[1];
+        flow.ActivateUI(indicacion2);
         audioManager.Play();
-        indicacion2.SetActive(true);
     }
     public void ActivateScene()
     {
@@ -67,20 +68,12 @@ public class GameFlowLvl1 : MonoBehaviour
     {
         stop = true;
     }
-
-    private void ActivateUI(GameObject ui)
-    {
-        DeactivateAllUi();
-        ui.transform.SetPositionAndRotation(pivotUi.transform.position, pivotUi.transform.rotation);
-        ui.SetActive(true);
-    }
     private IEnumerator ActivateAInvertebrate(int index)
     {
         yield return new WaitForSeconds(5);
 
         if (invertebratesList.Length > index && !stop)
         {
-            Debug.Log(index);
             invertebratesList[index].SetActive(true);
             StartCoroutine(ActivateAInvertebrate(index + 1));
             }

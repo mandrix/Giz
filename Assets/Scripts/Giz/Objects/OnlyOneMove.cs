@@ -22,7 +22,6 @@ public class OnlyOneMove : MonoBehaviour
     {
         if (ready)
         {
-            Debug.Log("d");
             t += Time.deltaTime / timeToReachTarget;
             transform.position = Vector3.Lerp(startPosition, target, t);
         }

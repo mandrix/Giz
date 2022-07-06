@@ -63,13 +63,14 @@ public class SceneFlow : MonoBehaviour
     public void ActivateUI(GameObject ui)
     {
         DeactivateAllUi();
+        ui.SetActive(true);
         Quaternion rotate = pivotUi.transform.rotation;
         Vector3 position = pivotUi.transform.position;
         rotate.x = 0;
         rotate.z = 0;
-        //position.y = transform.position.y;
+        position.y = ui.transform.position.y;
         ui.transform.SetPositionAndRotation(position, rotate);
-        ui.SetActive(true);
+        
     }
     public void ChangeScene(string newScene)
     {
