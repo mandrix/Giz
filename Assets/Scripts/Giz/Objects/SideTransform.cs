@@ -1,14 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class InteractiveSilhouette : MonoBehaviour
+public class SideTransform : MonoBehaviour
 {
     #region Variables
-    public Silhouette silhouette;
-    public GameFlow gameFlow;
-
     private Vector3 scale;
 
     #endregion
@@ -17,11 +13,6 @@ public class InteractiveSilhouette : MonoBehaviour
     void Start()
     {
         scale = transform.localScale;
-    }
-
-    void Update()
-    {
-        
     }
 
     private void OnMouseExit()
