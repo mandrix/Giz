@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Giz tutorial.unity
-    guid: 981e9cecc9e535a458f116fd24453920
-  - enabled: 1
     path: Assets/Scenes/Giz menu.unity
     guid: 4894c2d687bc21e43be19bb7d0303fff
+  - enabled: 1
+    path: Assets/Scenes/Giz tutorial.unity
+    guid: 981e9cecc9e535a458f116fd24453920
   - enabled: 1
     path: Assets/Scenes/GizNiv1.unity
     guid: e203bbeed6891b249a79a9dd09a97fed
@@ -29,6 +29,18 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/LoadingPage.unity
+    guid: acec2a3e39cda5343aad51791f784cec
+  - enabled: 1
+    path: Assets/Scenes/GizNiv4.unity
+    guid: a4dde0f33b7521548a4baf5492c1af68
+  - enabled: 1
+    path: Assets/Scenes/GizNiv5.unity
+    guid: 2d46e15c2b2ed044dbb781758627b87d
+  - enabled: 1
+    path: Assets/Scenes/GizNiv6.unity
+    guid: ca0a116409deb8245be7c7bf191543bc
   m_configObjects:
     WebXR.Settings: {fileID: 11400000, guid: 8dd5a2e68ed1db9428d000ee9601eb17, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 55bc64c84b38a634ead713d3c734f358,

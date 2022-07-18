@@ -14,13 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Group: Tutorial
   AudiosList:
-  - {fileID: 8300000, guid: bcbebeee14041fd43bf52ba3710d6883, type: 3}
-  - {fileID: 8300000, guid: 1a1ee51d4f5255c45a153ee174c8b1f2, type: 3}
-  - {fileID: 8300000, guid: d273f6535b7d9964097c4d6bac28ae45, type: 3}
-  - {fileID: 8300000, guid: d6fb5e3e9162ed24c9d09d96a75a987f, type: 3}
-  - {fileID: 8300000, guid: 295ed4a7a331b1549a6456aecca7a5ec, type: 3}
-  - {fileID: 8300000, guid: 5a131b953f796e846a2c191f9b1f6baa, type: 3}
-  - {fileID: 8300000, guid: 9fb18bc1bcf03434ca0643be648f9989, type: 3}
-  - {fileID: 8300000, guid: 0123f03285c1af946b3c876dcf917f60, type: 3}
-  - {fileID: 8300000, guid: b3e7e698894d0084193412a613b4511b, type: 3}
-  - {fileID: 8300000, guid: 0e62408162786c741ab20a73252dbc9f, type: 3}
+  - {fileID: 8300000, guid: 2442c8fb254cc52409cd0deef90e3527, type: 3}
+  - {fileID: 8300000, guid: 01a1c5c68788484408bf38f948aa5f84, type: 3}
+  - {fileID: 8300000, guid: 5ec4b03ff8d1324489635abf55cb0341, type: 3}
+  - {fileID: 8300000, guid: 28d48e521a6f8e941bdf40356d288709, type: 3}
+  - {fileID: 8300000, guid: daa59df18d42152499c3df669baefc8c, type: 3}

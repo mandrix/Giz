@@ -21,11 +21,14 @@ public class SceneFlow : MonoBehaviour
     private int sceneIndex; // el indice de la escena donde estoy (auxiliar para los audios)
     [SerializeField]
     private GameObject pivotUi; // ayuda para setear el UI
+    [SerializeField]
+    private LevelManager LvlManager;
     #endregion
 
     #region Unity Methods
     void Start()
     {
+        LvlManager = GameObject.Find("LvlManager").transform.GetComponent<LevelManager>();
         DeactivateAllUi();
         ActivateUI(firstInfoUi);
         audioManager.clip = audioList.getFirstAudio(sceneIndex);
@@ -74,7 +77,7 @@ public class SceneFlow : MonoBehaviour
     }
     public void ChangeScene(string newScene)
     {
-        SceneManager.LoadScene(newScene);
+        LvlManager.ChangeScene(newScene);
     }
 
     #endregion
