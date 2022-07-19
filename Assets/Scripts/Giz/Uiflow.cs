@@ -12,12 +12,15 @@ public class Uiflow : MonoBehaviour
     private GameObject selecterLvl;
     [SerializeField]
     private GameObject panelGris;
+    [SerializeField]
+    private LevelManager LvlManager;
     #endregion
 
 
     #region Unity Methods
     void Start()
     {
+        LvlManager = GameObject.Find("LvlManager").transform.GetComponent<LevelManager>();
         ActivatePanelGris();
     }
     #endregion
@@ -28,7 +31,7 @@ public class Uiflow : MonoBehaviour
 
     public void ChangeScene(string newScene)
     {
-        SceneManager.LoadScene(newScene);
+        LvlManager.ChangeScene(newScene);
     }
 
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnlyOneMove : MonoBehaviour
 {
     [SerializeField]
-    [Range(0, 5)]
+    [Range(0, 400)]
     private float timeToReachTarget = 10;
 
     private float t;
@@ -41,5 +41,10 @@ public class OnlyOneMove : MonoBehaviour
         startPosition = start;
         target = destination;
         ready = true;
+    }
+    public IEnumerator TimeUp(GameFlowLvl5 flow)
+    {
+        yield return new WaitForSeconds(timeToReachTarget);
+        flow.ActivateIndicacion3();
     }
 }

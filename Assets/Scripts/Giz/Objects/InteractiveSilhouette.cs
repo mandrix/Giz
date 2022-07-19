@@ -33,9 +33,6 @@ public class InteractiveSilhouette : MonoBehaviour
     {
         transform.localScale = scale;
         transform.localScale *= 1.05f;
-        gameFlow.CheckAnswer(silhouette.id);    
-       
-        //ui.GetComponentsInChildren<TMP_Text>()[0].text = silhouette.description;
     }
     #endregion
 }

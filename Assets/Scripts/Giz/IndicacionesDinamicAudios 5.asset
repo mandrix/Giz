@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15da1b4244a6d09449b02c65494e6045, type: 3}
+  m_Name: IndicacionesDinamicAudios 5
+  m_EditorClassIdentifier: 
+  Group: Aves
+  AudiosList:
+  - {fileID: 8300000, guid: bcbebeee14041fd43bf52ba3710d6883, type: 3}
+  - {fileID: 8300000, guid: 1a1ee51d4f5255c45a153ee174c8b1f2, type: 3}
+  - {fileID: 8300000, guid: bcbebeee14041fd43bf52ba3710d6883, type: 3}
+  - {fileID: 8300000, guid: 1a1ee51d4f5255c45a153ee174c8b1f2, type: 3}
+  - {fileID: 8300000, guid: d273f6535b7d9964097c4d6bac28ae45, type: 3}
+  - {fileID: 8300000, guid: b3e7e698894d0084193412a613b4511b, type: 3}
+  - {fileID: 8300000, guid: 295ed4a7a331b1549a6456aecca7a5ec, type: 3}
+  - {fileID: 8300000, guid: 5a131b953f796e846a2c191f9b1f6baa, type: 3}
+  - {fileID: 8300000, guid: 9fb18bc1bcf03434ca0643be648f9989, type: 3}
+  - {fileID: 8300000, guid: 0123f03285c1af946b3c876dcf917f60, type: 3}
+  - {fileID: 8300000, guid: b3e7e698894d0084193412a613b4511b, type: 3}
+  - {fileID: 8300000, guid: 0e62408162786c741ab20a73252dbc9f, type: 3}

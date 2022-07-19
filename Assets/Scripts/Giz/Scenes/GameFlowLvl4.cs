@@ -48,6 +48,17 @@ public class GameFlowLvl4 : MonoBehaviour
         audioManager.Play();
         indicacion2.SetActive(true);
     }
+    public void Activate()
+    {
+        DeactivateAllUi();
+    }
+    public void ActivateIndicacion3()
+    {
+        DeactivateAllUi();
+        audioManager.clip = audioList.AudiosList[2];
+        audioManager.Play();
+        indicacion2.SetActive(true);
+    }
     public void ActivateScene()
     {
         DeactivateAllUi();

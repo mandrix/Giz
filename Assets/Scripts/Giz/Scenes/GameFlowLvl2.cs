@@ -44,14 +44,14 @@ public class GameFlowLvl2 : MonoBehaviour
         indicacion1.SetActive(false);
 
     }
+    public void DeactiveAnimal()
+    {
+        animal.SetActive(false);
+    }
     public void ChangeScene(string newScene)
     {
         SceneManager.LoadScene(newScene);
     }
     #endregion
 
-    public void DeactiveAnimal()
-    {
-        animal.SetActive(false);
-    }
 }

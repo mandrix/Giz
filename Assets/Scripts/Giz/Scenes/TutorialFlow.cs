@@ -97,7 +97,6 @@ public class TutorialFlow : MonoBehaviour
     public void ActivateFinalUi()
     {
         DeactivateAllUi();
-        NextAudio();
         ActivateUI(finalUi);
     }
     private void NextAudio()
