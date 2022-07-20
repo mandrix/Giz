@@ -11,11 +11,24 @@ public class ActivateBirds : MonoBehaviour
     private SceneFlow flow;
     [SerializeField]
     private bool isActive = false;
+    [SerializeField]
+    private static bool end = false;
     static bool ready = false;
     private void Start()
     {
         ready = false;
         inactiveBirds += 1;
+    }
+    private void Update()
+    {
+        if (end)
+        {
+            gameObject.SetActive(false);
+        }   
+    }
+    public void SetEnd()
+    {
+        end = true;
     }
     public void SetReady()
     {

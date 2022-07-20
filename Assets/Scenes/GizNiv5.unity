@@ -5492,7 +5492,7 @@ PrefabInstance:
     - target: {fileID: 6346499757122975913, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ActivateFinalUI
+      value: ActivateInfoUI
       objectReference: {fileID: 0}
     - target: {fileID: 6346499757122975913, guid: 24677f96a651352459eb350ec97b786c,
         type: 3}
@@ -8171,6 +8171,7 @@ MonoBehaviour:
   selecterLvl: {fileID: 1022813497}
   sceneIndex: 5
   pivotUi: {fileID: 578027377}
+  LvlManager: {fileID: 0}
 --- !u!1 &1658127889
 GameObject:
   m_ObjectHideFlags: 0

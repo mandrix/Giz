@@ -20,15 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GizNiv3.unity
     guid: a5ce07b5bc76d7c4daa7556306e0c220
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/LoadingPage.unity
     guid: acec2a3e39cda5343aad51791f784cec

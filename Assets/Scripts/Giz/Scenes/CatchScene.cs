@@ -21,7 +21,7 @@ public class CatchScene : MonoBehaviour
 
     private IEnumerator ActivateScene()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(0.2f);
         LvlManager = GameObject.Find("LvlManager").transform.GetComponent<LevelManager>();
         LvlManager.LoadScene();
     }

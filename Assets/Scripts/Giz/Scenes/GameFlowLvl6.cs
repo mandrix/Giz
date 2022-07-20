@@ -48,6 +48,8 @@ public class GameFlowLvl6 : MonoBehaviour
         DeactivateAllUi();
         bird.GetComponent<ActivateBirds>().SetReady();
     }
+
+
     #endregion
 
 
