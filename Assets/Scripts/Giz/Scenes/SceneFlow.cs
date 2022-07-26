@@ -28,7 +28,12 @@ public class SceneFlow : MonoBehaviour
     #region Unity Methods
     void Start()
     {
-        LvlManager = GameObject.Find("LvlManager").transform.GetComponent<LevelManager>();
+        
+        if (GameObject.Find("LvlManager"))
+        {
+            LvlManager = GameObject.Find("LvlManager").transform.GetComponent<LevelManager>();
+
+        }
         DeactivateAllUi();
         ActivateUI(firstInfoUi);
         audioManager.clip = audioList.getFirstAudio(sceneIndex);
